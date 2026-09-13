@@ -201,9 +201,8 @@
   .social-icons svg{width:16px; height:16px;}
   .club-icons{display:flex; flex-wrap:wrap; gap:10px;}
   .club-icons a{
-    min-width:38px; height:38px; border:1px solid var(--gold-bright);
-    display:flex; align-items:center; justify-content:center; font-size:10px;
-    padding:0 8px; white-space:nowrap;
+    width:38px; height:38px; border:1px solid var(--gold-bright);
+    display:flex; align-items:center; justify-content:center; font-size:11px;
   }
   .footer-bottom{
     max-width:1080px; margin:36px auto 0; padding-top:20px;
@@ -228,10 +227,10 @@
 <header>
   <div class="nav-row">
     <div class="brand">
-      <img src="assets/aft_seal.png" alt="ตราสัญลักษณ์ อวท." style="width:40px;height:40px;border-radius:50%;flex-shrink:0;">
+      <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#D4AF37" stroke-width="2"/><circle cx="30" cy="30" r="10" stroke="#D4AF37" stroke-width="2"/><path d="M30 8V16M30 44V52M8 30H16M44 30H52M14.6 14.6L20 20M40 40L45.4 45.4M45.4 14.6L40 20M20 40L14.6 45.4" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/></svg>
       <div class="brand-text">
         <div class="th">อวท. ฐานวิทยาศาสตร์ ชลบุรี</div>
-        <div class="en">AFT.SBTVC</div>
+        <div class="en">SCIENCE-BASED TECH VOCATIONAL COLLEGE</div>
       </div>
     </div>
     <nav>
@@ -247,7 +246,40 @@
 
 <section class="hero">
   <div class="wrap">
-    <img class="seal" src="assets/aft_seal.png" alt="ตราสัญลักษณ์องค์การนักวิชาชีพในอนาคตแห่งประเทศไทย">
+    <!-- Hand-built seal: gear ring + orbiting spark, arced Thai lettering -->
+    <svg class="seal" viewBox="0 0 200 200">
+      <defs>
+        <path id="ringTop" d="M 30,100 A 70,70 0 0 1 170,100" />
+        <path id="ringBottom" d="M 42,140 A 62,62 0 0 0 158,140" />
+      </defs>
+      <circle cx="100" cy="100" r="92" fill="none" stroke="#6E1423" stroke-width="2"/>
+      <circle cx="100" cy="100" r="80" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+      <!-- gear teeth -->
+      <g fill="#6E1423">
+        <rect x="97" y="6" width="6" height="10"/>
+        <rect x="97" y="184" width="6" height="10"/>
+        <rect x="6" y="97" width="10" height="6"/>
+        <rect x="184" y="97" width="10" height="6"/>
+        <rect x="97" y="6" width="6" height="10" transform="rotate(45 100 100)"/>
+        <rect x="97" y="184" width="6" height="10" transform="rotate(45 100 100)"/>
+        <rect x="6" y="97" width="10" height="6" transform="rotate(45 100 100)"/>
+        <rect x="184" y="97" width="10" height="6" transform="rotate(45 100 100)"/>
+      </g>
+      <!-- science + technology mark: atom orbit around a gear core -->
+      <circle cx="100" cy="100" r="34" fill="none" stroke="#6E1423" stroke-width="2"/>
+      <g stroke="#C6A15B" stroke-width="1.6" fill="none">
+        <ellipse cx="100" cy="100" rx="30" ry="12" transform="rotate(0 100 100)"/>
+        <ellipse cx="100" cy="100" rx="30" ry="12" transform="rotate(60 100 100)"/>
+        <ellipse cx="100" cy="100" rx="30" ry="12" transform="rotate(120 100 100)"/>
+      </g>
+      <circle cx="100" cy="100" r="5" fill="#6E1423"/>
+      <text font-family="Noto Serif Thai, serif" font-size="10.5" fill="#6E1423" letter-spacing="1">
+        <textPath href="#ringTop" startOffset="50%" text-anchor="middle">องค์การนักวิชาชีพในอนาคตแห่งประเทศไทย</textPath>
+      </text>
+      <text font-family="Noto Serif Thai, serif" font-size="9" fill="#6E1423" letter-spacing=".5">
+        <textPath href="#ringBottom" startOffset="50%" text-anchor="middle">ฐานวิทยาศาสตร์ ชลบุรี</textPath>
+      </text>
+    </svg>
 
     <div class="eyebrow-rule"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
 
@@ -343,12 +375,11 @@
       <p>องค์การนักวิชาชีพในอนาคตแห่งประเทศไทย หน่วยวิทยาลัยอาชีวศึกษาเทคโนโลยีฐานวิทยาศาสตร์ (ชลบุรี) จัดตั้งขึ้นเพื่อพัฒนาสมาชิกให้เป็นคนดี คนเก่ง และมีความสุข ควบคู่กับการเรียนสายอาชีพด้านวิทยาศาสตร์และเทคโนโลยี &mdash; <em>(ส่วนนี้เป็นข้อความตัวอย่าง แทนที่ด้วยประวัติจริงของวิทยาลัยคุณ)</em></p>
       <p style="margin-top:16px;">ปัจจุบันประกอบด้วยชมรมวิชาชีพหลายสาขา ดังนี้:</p>
       <div class="clubs">
-        <span>ชมรมวิชาชีพช่างยนต์</span>
-        <span>ชมรมวิชาชีพช่างไฟฟ้ากำลัง</span>
-        <span>ชมรมวิชาชีพช่างอิเล็กทรอนิกส์</span>
-        <span>ชมรมวิชาชีพเมคคาทรอนิกส์</span>
-        <span>ชมรมวิชาชีพเทคโนโลยีสารสนเทศ</span>
-        <span>ชมรมวิชาชีพช่างอุตสาหกรรมฐานวิทยาศาสตร์</span>
+        <span>ชมรมช่างยนต์</span>
+        <span>ชมรมช่างไฟฟ้า</span>
+        <span>ชมรมเทคโนโลยีสารสนเทศ</span>
+        <span>ชมรมวิทยาศาสตร์ประยุกต์</span>
+        <span>ชมรมเกษตรเทคโนโลยี</span>
       </div>
     </div>
     <div>
@@ -369,27 +400,23 @@
   <div class="footer-grid">
     <div>
       <h4>ที่ตั้งวิทยาลัย</h4>
-      <p>เลขที่ 37 หมู่ 3 ต.บ้านเก่า อ.พานทอง จ.ชลบุรี 20160<br>
-      โทรศัพท์ 086-416-5307, 038-447-241<br>
-      โทรสาร 038-447-243<br>
-      อีเมล chonburi.sbtvc@gmail.com</p>
+      <p>ตำบลพานทอง อำเภอพานทอง จังหวัดชลบุรี<br>(แทนที่ด้วยที่อยู่จริงของวิทยาลัย)</p>
     </div>
     <div>
       <h4>ช่องทางออนไลน์</h4>
       <div class="social-icons">
-        <a href="https://www.facebook.com/AFTP.SCI.BASED?locale=th_TH" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.6"><path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v7h3v-7h2l1-3h-3v-1.5a.5.5 0 0 1 .5-.5H16V8Z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.6"><path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v7h3v-7h2l1-3h-3v-1.5a.5.5 0 0 1 .5-.5H16V8Z"/></svg></a>
+        <a href="#" aria-label="Line"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M7 10v4M12 10v4M17 10v3l-2-3"/></svg></a>
       </div>
-      <p style="margin-top:10px; font-size:12.5px;">facebook.com/AFTP.SCI.BASED</p>
     </div>
     <div>
       <h4>ชมรมวิชาชีพที่สังกัด</h4>
       <div class="club-icons">
-        <a href="#" title="ชมรมวิชาชีพช่างยนต์">ยนต์</a>
-        <a href="#" title="ชมรมวิชาชีพช่างไฟฟ้ากำลัง">ไฟฟ้า</a>
-        <a href="#" title="ชมรมวิชาชีพช่างอิเล็กทรอนิกส์">อิเล็กฯ</a>
-        <a href="#" title="ชมรมวิชาชีพเมคคาทรอนิกส์">เมคคา</a>
-        <a href="#" title="ชมรมวิชาชีพเทคโนโลยีสารสนเทศ">IT</a>
-        <a href="#" title="ชมรมวิชาชีพช่างอุตสาหกรรมฐานวิทยาศาสตร์">อุตฯวิทย์</a>
+        <a href="#" title="ช่างยนต์">ยนต์</a>
+        <a href="#" title="ช่างไฟฟ้า">ไฟฟ้า</a>
+        <a href="#" title="IT">IT</a>
+        <a href="#" title="วิทยาศาสตร์">วิทย์</a>
+        <a href="#" title="เกษตร">เกษตร</a>
       </div>
     </div>
   </div>
